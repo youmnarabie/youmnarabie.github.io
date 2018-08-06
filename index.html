@@ -1,12 +1,387 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Youmna's Website</title>
+    <title>Youmna Rabie</title>
+    <link rel="short cut icon" type="image/x-icon" href="favicon.ico">
+
+    <!-- Set the page to the width of the device and set the zoom level -->
+    <meta name="viewport" content="width = device-width, initial-scale = 1">
+
+    <style>
+
+        /* Google Fonts */
+        @import url(https://fonts.googleapis.com/css?family=Anonymous+Pro);
+        @import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+        /* CODE FOR AIR (SURAJ'S WEBSITE) */
+        @media print {
+            *,
+            *:before,
+            *:after {
+                background: transparent !important;
+                color: #000 !important;
+                box-shadow: none !important;
+                text-shadow: none !important;
+            }
+
+            a,
+            a:visited {
+                text-decoration: underline;
+            }
+
+            a[href]:after {
+                content: " (" attr(href) ")";
+            }
+
+            abbr[title]:after {
+                content: " (" attr(title) ")";
+            }
+
+            a[href^="#"]:after,
+            a[href^="javascript:"]:after {
+                content: "";
+            }
+
+            pre,
+            blockquote {
+                border: 1px solid #999;
+                page-break-inside: avoid;
+            }
+
+            thead {
+                display: table-header-group;
+            }
+
+            tr,
+            img {
+                page-break-inside: avoid;
+            }
+
+            img {
+                max-width: 100% !important;
+            }
+
+            p,
+            h2,
+            h3 {
+                orphans: 3;
+                widows: 3;
+            }
+
+            h2,
+            h3 {
+                page-break-after: avoid;
+            }
+        }
+
+        html {
+            font-size: 12px;
+        }
+
+        @media screen and (min-width: 32rem) and (max-width: 48rem) {
+            html {
+                font-size: 15px;
+            }
+        }
+
+        @media screen and (min-width: 48rem) {
+            html {
+                font-size: 16px;
+            }
+        }
+
+        body {
+            line-height: 1.85;
+        }
+
+        p,
+        .air-p {
+            font-size: 1rem;
+            margin-bottom: 1.3rem;
+        }
+
+        h1,
+        .air-h1,
+        h2,
+        .air-h2,
+        h3,
+        .air-h3,
+        h4,
+        .air-h4 {
+            margin: 1.414rem 0 .5rem;
+            font-weight: inherit;
+            line-height: 1.42;
+        }
+
+        h1,
+        .air-h1 {
+            margin-top: 0;
+            font-size: 3.998rem;
+        }
+
+        h2,
+        .air-h2 {
+            font-size: 2.827rem;
+        }
+
+        h3,
+        .air-h3 {
+            font-size: 1.999rem;
+        }
+
+        h4,
+        .air-h4 {
+            font-size: 1.414rem;
+        }
+
+        h5,
+        .air-h5 {
+            font-size: 1.121rem;
+        }
+
+        h6,
+        .air-h6 {
+            font-size: .88rem;
+        }
+
+        small,
+        .air-small {
+            font-size: .707em;
+        }
+
+        /* https://github.com/mrmrs/fluidity */
+
+        img,
+        canvas,
+        iframe,
+        video,
+        svg,
+        select,
+        textarea {
+            max-width: 100%;
+        }
+
+
+        @import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,300);
+
+        body {/*
+  color: #444;
+  font-family: 'Open Sans', Helvetica, sans-serif;*/
+            color: white !important ;
+            font-weight: 300;
+            margin: 6rem auto 1rem;
+            max-width: 48rem;
+            text-align: center;
+        }
+
+        img {
+            border-radius: 50%;
+            height: 200px;
+            margin: 0 auto;
+            width: 200px;
+        }
+
+        a,
+        a:visited {
+            color: #d8d8d8; /* not sure if i will like this - COME BACK */
+        }
+
+        a:hover,
+        a:focus,
+        a:active {
+            color: white;
+        }
+
+        pre {
+            background-color: #fafafa;
+            padding: 1rem;
+            text-align: left;
+        }
+
+        blockquote {
+            margin: 0;
+            border-left: 5px solid #7a7a7a;
+            font-style: italic;
+            padding: 1.33em;
+            text-align: left;
+        }
+
+        ul,
+        ol,
+        li {
+            text-align: left;
+        }
+
+        p {
+            color: #777;
+        }
+
+        /* end code for air */
+
+        /* Global */
+        html{
+            min-height: 100%;
+            overflow: hidden;
+        }
+        body{
+            height: calc(100vh - 8em);
+            padding: 4em;
+            color: rgba(255,255,255,.75);
+            font-family: 'Anonymous Pro', monospace;
+            background-color: #f98a6e;
+            /*rgb(25,25,25); */
+        }
+
+        .space{
+            padding-top: 30px;
+        }
+        .small-space{
+            padding: 0px;
+        }
+
+        .line-1{
+            /*position: relative;
+            top: 35%;
+            width: 24em;*/
+            margin: 0 auto;
+            width: 24em;
+            border-right: 2px solid rgba(255,255,255,.75);
+            font-size: 180%;
+            text-align: center;
+            white-space: nowrap;
+            overflow: hidden;
+            transform: translateY(-50%);
+            color: white;
+        }
+        .alt-line-1{
+            /*position: relative;
+            top: 35%;
+            width: 24em;*/
+            margin: 0 auto;
+            width: 10em;
+            border-right: 2px solid rgba(255,255,255,.75);
+            font-size: 180%;
+            text-align: center;
+            white-space: nowrap;
+            overflow: hidden;
+            transform: translateY(-50%);
+            color: white;
+        }
+
+        .line-2{
+            /*position: relative;
+            top: 38%;  */
+
+            margin: 0 auto;
+            text-align: center;
+            /*white-space: nowrap;*/
+            overflow: hidden;
+            transform: translateY(-50%);
+            color: white;
+        }
+
+        .line-3{
+            /*position: relative;
+            top: 39%;  */
+            margin: 0 auto;
+            text-align: center;
+            /*white-space: nowrap;*/
+            overflow: hidden;
+            transform: translateY(-50%);
+            color: white;
+        }
+
+        .avatar {
+            /*position: relative;
+            top: 30%;  */
+            margin: auto;
+            display: block;
+            border-radius: 200px;
+            box-sizing: border-box;
+            background-color: #DDD;
+            border: 5px solid white;
+        }
+
+        @media only screen and (min-width:1024px){
+
+            .line-1{ display: block; }
+            .alt-line-1 { display: none; }
+
+        }
+
+        @media only screen and (max-width:1024px){
+
+            .line-1{ display: none; }
+            .alt-line-1 { display: block; }
+
+        }
+
+        /* Animation */
+        .anim-typewriter{
+            animation: typewriter 4s steps(44) 1s 1 normal both,
+            blinkTextCursor 500ms steps(44) infinite normal;
+        }
+
+        .anim-typewriter-alt{
+            animation: alt-typewriter 2s steps(22) 1s 1 normal both,
+            blinkTextCursor 500ms steps(22) infinite normal;
+        }
+
+        @keyframes typewriter{
+            from{width: 0;}
+            to{width: 19.5em;}
+        }
+        @keyframes alt-typewriter{
+            from{width: 0;}
+            to{width: 7em;}
+        }
+
+        @keyframes blinkTextCursor{
+            from{border-right-color: rgba(255,255,255,.75);}
+            to{border-right-color: transparent;}
+        }
+
+        p, ul {
+            padding: 0;
+            margin: 0;
+        }
+
+    </style>
+
+
 </head>
+
 <body>
 
-<h1>Hello Internet!</h1>
-<p>This is a paragraph.</p>
-<script>alert('VIRUS VIRUS OH NO STOP!');</script>
+<div class = "container">
+
+    <img class="avatar" src="http://i.imgur.com/3BdvBxM.jpg" id="me" alt="Responsive Image" style="width:100px;height:100px;">
+
+    <p class = "small space"></p>
+
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+
+        <p class="line-1 anim-typewriter"><strong>Hi, I'm Emma. Welcome to my website!</strong></p>
+
+        <p class="alt-line-1 anim-typewriter-alt"><strong>Hi, I'm Emma.</strong></p>
+
+    </div>
+
+    <br>
+
+    <p class = "line-2">This is a temporary landing page while I work on something new :) Click <a href = "https://drive.google.com/file/d/1z6DcIN27liv5UHgBB-VgYnAwvtcAbNCF/view?usp=sharing">here</a> to view my resume for the time being!</p>
+
+    <br>
+
+    <p class = "line-3">I just completed my sophomore year at UC Berkeley. Here are my plans for the summer and coming semester:<ul>
+    <li>This summer, I'll be interning at Amazon in Seattle (yay)!</li>
+    <li>Next semester, I'm planning to take CS 160 (UI Design and Development), Data 100 (Techniques of Data Science), and hopefully another class related to design.</li>
+    <li>I'll also be a design lead for the Berkeley B-Side next semester, and will continue to teach Data 8.</li>
+</ul>
+
+    Contact me: <a href="https://www.linkedin.com/in/emmajaeger/">LinkedIn</a> | <a href="mailto:emmajaeger@berkeley.edu">email</a> | <a href="http://www.github.com/emmajaeger">GitHub</a></p>
+
+</div>
+
 </body>
 </html>
