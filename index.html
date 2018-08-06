@@ -206,11 +206,35 @@
             text-align: left;
         }
 
-        ul,
+        ul {
+    		list-style-type: none;
+    		margin: 0;
+    		padding: 0;
+    		overflow: hidden;
+    		background-color: #2483BD;
+}
         ol,
         li {
             text-align: justify;
+            font-size: 16pt;
+            float: left;
         }
+
+        li a, .dropbtn {
+    		display: inline-block;
+    		color: white;
+    		text-align: center;
+    		padding: 14px 16px;
+    		text-decoration: none;
+		}
+
+		li a:hover, .dropdown:hover .dropbtn {
+    		background-color: #1e5e85;
+		}
+
+		li.dropdown {
+			display: inline-block;
+		}
 
         p {
             color: #777;
@@ -231,41 +255,20 @@
             background-color: #91b6d8;
         }
 
-        .navbar {
-    		overflow: hidden;
-    		background-color: #2483BD;
-    		font-family: 'Poiret One';
-    		position: sticky;
-		}
-
-		.navbar a {
-    		float: right;
-    		font-size: 16px;
-    		color: white;
-    		text-align: center;
-    		padding: 14px 16px;
-    		text-decoration: none;
-    		position: sticky;
-		}
-
 		.dropdown {
     		float: right;
-    		overflow: hidden;
+    		display: inline-block;
 		}
 
 		.dropdown .dropbtn {
     		font-size: 16px;    
     		border: none;
     		outline: none;
-    		/*color: white;*/
-    		/*padding: 14px 16px;*/
+    		color: white;
+    		padding: 14px 16px;
     		background-color: inherit;
     		font-family: inherit;
     		margin: 0;
-		}
-
-		.navbar a:hover, .dropdown:hover .dropbtn {
-    		background-color: #2483BD;
 		}
 
 		.dropdown-content {
@@ -279,7 +282,7 @@
 
 		.dropdown-content a {
     		float: all;
-    		color: black;
+    		color: white;
     		padding: 12px 16px;
     		text-decoration: none;
     		display: block;
@@ -287,7 +290,7 @@
 		}
 
 		.dropdown-content a:hover {
-    		background-color: #ddd;
+    		background-color: #1e5e85;
 		}
 
 		.dropdown:hover .dropdown-content {
@@ -309,9 +312,6 @@
 
         .space{
             padding-top: 30px;
-        }
-        .small-space{
-            padding: 0px;
         }
 
         .line-1{
@@ -381,6 +381,11 @@
 			clear: both;
 		}
 
+		.active {
+ 			background-color: #1e5e85;
+  			color: white;
+		}
+
         @media only screen and (min-width:1024px){
 
             .line-1{ display: block; }
@@ -408,7 +413,7 @@
 
         @keyframes typewriter{
             from{width: 0;}
-            to{width: 19.5em;}
+            to{width: 12em;}
         }
         @keyframes alt-typewriter{
             from{width: 0;}
@@ -424,46 +429,34 @@
             padding: 0;
             margin: 0;
         }
-
-        .h1 {
-        	text-decoration: overline;
-        	text-decoration: underline;
-        }
-
     </style>
-
-
 </head>
 
 <body>
-
 	<header>
 		<h1>
 			YOUMNA RABIE
-			<div class="navbar">
-  				<a href="#About">About</a>
-  				<a href="#Home">Home</a>
-  				<a href="#Projects">Projects</a>
-  				<div class="dropdown">
-    				<button class="dropbtn">Contact 
-      				<i class="fa fa-caret-down"></i>
-   					</button>
-    				<div class="dropdown-content">
-      					<a href="https://www.linkedin.com/in/youmnarabie/">LinkedIn</a>
+			<ul>
+  				<li><a href="#Home" class="active">Home</a></li>
+  				<li><a href="#About">About</a></li>
+  				<li class="dropdown">
+    				<a href="javascript:void(0)" class="dropbtn">Contact me!</a>
+					<div class="dropdown-content">
+      					<a href="https://www.linkedin.com/in/youmna-rabie/">LinkedIn</a>
       					<a href="http://www.github.com/youmnarabie">GitHub</a>
       					<a href="mailto:youmnarabie@berkeley.edu">Email</a>
     				</div>
-  				</div> 
-			</div>
+  				</li>
+			</ul>
 		</h1>
 	</header>
 
 
 	<div class = "row">
-		<div class = "column left" style="background-color: #91b6d8">
+		<div class = "column left">
     		<img class="center" src="https://media.licdn.com/dms/image/C4D03AQF8t_hwwdhBqg/profile-displayphoto-shrink_200_200/0?e=1539216000&v=beta&t=1Jl03pvVMPFhjkfX8yU2Z7Alr7eNDfg9KxqurRpAHas" id="me" alt="This should be a photo of my face!" style="height: 300px width: 300px">			
 		</div>
-		<div class = "column right" style="background-color: #91b6d8">
+		<div class = "column right">
 			<p class="line-1 anim-typewriter"><strong>Hi, I'm Youmna. Welcome!</strong></p>
 			<p class = "line-2">I'm still working on this website, so in the mean time feel free to click <a href = "https://drive.google.com/file/d/1WTrBwxKsl2ILNh-Z76DySOxv_B1NDPLo/view?usp=sharing">here</a> to view my resume!</p> 
 			<p class = "line-3">I'm going to be starting my junior year at UC Berkeley in the fall, and here's what I've been up to this summer, and my plans for the coming semester:<ul>
@@ -472,16 +465,10 @@
    		 	<li>I also joined an amazing group called Opportunity Through Data as the lead of the statistics team. This organization is designing a curriculum to teach incarcerated women valuable data science skills so that they are well-equipped to (re)join the workforce upon release. It's something I'm really passionate about and I'm really excited about what the future holds!</li>
     		<li> Next semester, I will be returning to Data 8 staff as a Tutor, which I'm incredible excited about. I'll also be taking some fascinating classes, such as efficient algorithms and intractable problems, principles of data science, and econometrics! </li>
 			</ul></p>
-			<br>
-			<br>
 			<p class = "line-4">
     		If you'd like to contact me, feel free to use any of the channels in the drop-down menu above! 
-    		<br>
-    		<br>
 			</p>
 		</div>
 	</div>
-
-
 </body>
 </html>
