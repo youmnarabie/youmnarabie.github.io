@@ -32,6 +32,8 @@
     background-color: rgb(202, 196, 212);
     background-size: 100%;
     -webkit-background-clip: text;
+    -moz-backgroound-clip: text;
+    -moz-text-fill-color: transparent;
     -webkit-text-fill-color: transparent;
     display: flex;
     align-items: center;
@@ -66,7 +68,7 @@
 }
 
 .navbar__links:hover {
-    color: #272944;
+    color: #232649;
     transition: all 0.3s ease;
 }
 
